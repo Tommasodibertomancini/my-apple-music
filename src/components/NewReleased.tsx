@@ -30,9 +30,9 @@ const NewRelesead = () => {
 
   return (
     <Container className='mt-4'>
-      <h2>
+      <h4>
         Nuove uscite <ChevronRight />
-      </h2>
+      </h4>
 
       <Row xs={3} lg={5}>
         {songs.map((song) => {

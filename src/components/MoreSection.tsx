@@ -4,7 +4,7 @@ import MoreOption from './MoreOption';
 const MoreSection = () => {
   return (
     <Container>
-      <h2>Altro da esplorare</h2>
+      <h5>Altro da esplorare</h5>
       <Row className='mt-3'>
         <MoreOption title='Esplora per generi' />
         <MoreOption title='Worldwide' />
