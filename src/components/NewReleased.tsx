@@ -5,7 +5,7 @@ import { ChevronRight } from 'react-bootstrap-icons';
 import { Track } from '../types/Track';
 import NewSong from './NewSong';
 
-const NewRelesead = () => {
+const NewReleased = () => {
   const [songs, setSongs] = useState<Track[]>([]);
 
   const URL = 'https://striveschool-api.herokuapp.com/api/deezer/search?q=';
@@ -15,7 +15,7 @@ const NewRelesead = () => {
       const response = await fetch(URL + 'eminem');
       if (response.ok) {
         const data = await response.json();
-        setSongs(data.data);
+        setSongs(data.data); 
       } else {
         throw new Error('Errore nel recupero dati!');
       }
@@ -35,16 +35,14 @@ const NewRelesead = () => {
       </h4>
 
       <Row xs={3} lg={5}>
-        {songs.map((song) => {
-          return (
-            <Col key={song.id} className='mb-3'>
-              <NewSong track={song} />
-            </Col>
-          );
-        })}
+        {songs.slice(0, 10).map((song) => (
+          <Col key={song.id} className='mb-3'>
+            <NewSong track={song} />
+          </Col>
+        ))}
       </Row>
     </Container>
   );
 };
 
-export default NewRelesead;
+export default NewReleased;
