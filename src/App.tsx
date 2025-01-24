@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useState } from 'react';
 import SideNav from './components/SideNav';
+import MobilePlayer from './components/MobilePlayer';
 
 function App() {
   const [show, setShow] = useState(false);
@@ -37,6 +38,7 @@ function App() {
             <NewSection />
             <NewReleased />
             <MoreSection />
+            <MobilePlayer />
           </Container>
 
           <Footer />
