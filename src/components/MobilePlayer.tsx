@@ -12,7 +12,7 @@ const MobilePlayer = () => {
       >
         <img
           src='../../public/assets/images/music.png'
-          alt='ecdcomi'
+          alt='musica'
           className=' img-fluid'
         />
       </div>
